@@ -1,0 +1,12 @@
+{
+  "events": [
+    {
+      "id": "evt-laptop-2026",
+      "summary": "Laptop kaufen",
+      "start": "2026-09-12T10:00:00+02:00",
+      "end": "2026-09-12T11:00:00+02:00",
+      "description": "ThinkPad X1 Carbon bei TechHaus abholen und Rechnung mitnehmen.",
+      "location": "TechHaus Berlin, Friedrichstraße 123"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "vendor": "TechHaus Berlin GmbH",
+  "date": "2026-09-12",
+  "invoiceNumber": "RE-2026-18472",
+  "net": 1259.66,
+  "vat": 239.34,
+  "gross": 1499,
+  "currency": "EUR",
+  "items": [
+    {
+      "description": "Lenovo ThinkPad X1 Carbon Laptop",
+      "net": 1259.66,
+      "vatRate": 0.19
+    }
+  ],
+  "categoryHint": "Computerhardware/Notebook"
+}

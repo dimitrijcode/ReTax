@@ -1,0 +1,53 @@
+// Documentation-only. The fixture MVP persists to data/store.json because
+// `prisma generate` is unreliable in this environment. Keep this schema for a
+// later SQLite migration (same models: GoogleConnection, Candidate, Booking).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model GoogleConnection {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  accessToken  String
+  refreshToken String
+  expiryDate   DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+enum CandidateStatus {
+  needs_review
+  skipped
+  personal
+  booked
+}
+
+model Candidate {
+  id                String          @id @default(cuid())
+  status            CandidateStatus @default(needs_review)
+  calendarEventJson Json
+  gmailMessageJson  Json
+  pdfPath           String?
+  invoiceJson       Json?
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+  booking           Booking?
+}
+
+model Booking {
+  id               String    @id @default(cuid())
+  candidateId      String    @unique
+  candidate        Candidate @relation(fields: [candidateId], references: [id])
+  decision         String
+  businessSharePct Int
+  method           String
+  planJson         Json
+  journalJson      Json
+  createdAt        DateTime  @default(now())
+}

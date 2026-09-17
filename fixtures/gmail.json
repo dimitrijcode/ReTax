@@ -1,0 +1,21 @@
+{
+  "messages": [
+    {
+      "id": "msg-laptop-invoice",
+      "threadId": "thread-laptop-2026",
+      "from": "TechHaus Berlin GmbH <rechnung@techhaus.example>",
+      "subject": "Ihre Rechnung RE-2026-18472 — ThinkPad X1 Carbon",
+      "date": "Fri, 12 Sep 2026 14:22:00 +0200",
+      "snippet": "Anbei die Rechnung für Ihren Laptop (ThinkPad X1 Carbon) über 1.499,00 €.",
+      "body": "Guten Tag,\n\nanbei die Rechnung RE-2026-18472 für den Lenovo ThinkPad X1 Carbon Laptop.\nNetto 1.259,66 €, 19 % USt 239,34 €, Brutto 1.499,00 €.\n\nMit freundlichen Grüßen\nTechHaus Berlin GmbH\n",
+      "attachments": [
+        {
+          "filename": "laptop-invoice.pdf",
+          "mimeType": "application/pdf",
+          "attachmentId": "att-laptop-pdf",
+          "path": "fixtures/laptop-invoice.pdf"
+        }
+      ]
+    }
+  ]
+}
